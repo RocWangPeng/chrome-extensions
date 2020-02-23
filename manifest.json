@@ -1,0 +1,37 @@
+{
+    "name": "king-chrome",
+    "description": "king-chrome",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": {
+        "16": "./assets/icon.png",
+        "32": "./assets/icon.png",
+        "48": "./assets/icon.png",
+        "128": "./assets/icon.png"
+    },
+    "browser_action": {
+        "default_icon": "./assets/icon.png",
+        "default_title": "默认标题",
+        "default_popup": "./popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "./js/content-script.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "notifications",
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "http://*/*",
+        "https://*/*"
+    ]
+}
