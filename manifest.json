@@ -1,6 +1,6 @@
 {
-    "name": "king-chrome",
-    "description": "king-chrome",
+    "name": "待办",
+    "description": "待办",
     "version": "1.0",
     "manifest_version": 2,
     "icons": {
@@ -11,9 +11,13 @@
     },
     "browser_action": {
         "default_icon": "./assets/icon.png",
-        "default_title": "默认标题",
+        "default_title": "todolist",
         "default_popup": "./popup.html"
     },
+    "chrome_url_overrides":
+	{
+		"newtab": "index.html"
+	},
     "content_scripts": [
         {
             "matches": [
